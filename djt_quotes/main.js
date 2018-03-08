@@ -4,7 +4,7 @@ $(function(){
   newQuote();
 })
 var index = [];
-var colors = ["#21AA16", "#B9FE91", "#F229CD", "#61A439", "#342D5E", "#B3FAD7", "#AD59E4", "#5DC423", "#1D8C39", "#23CCB1"];
+var colors = ["#E092C9","#36778B","#44668E","#B2B2C2","#BC8DC9","#204A2A","#DE64DE","#5DECEB","#967F36","#08B660","#428DF3","#0FDB4B","#7300B8","#F0766D","#57D9F0","#2FDB0B","#EDADB2","#2A3C82","#02E557","#0FEE74","#6B6487","#93C99F","#0DAD6A","#AE4AFE","#4B44B4","#3FE5AF","#2BD59E","#76CD79","#C8683A","#DDDA5C","#B9BEDB","#D7C690","#CBC3C7","#333FCC","#A8E288","#A76DDD","#FF9475","#2D575D","#6D8757","#ED0484","#074C3D","#DC7EBC","#FC9558","#8AD787","#4BE5DB","#D6654C","#600A58","#DBF3C0","#5C835F","#CE6727"]
 
 function randomBgColor() {
   "use strict";
