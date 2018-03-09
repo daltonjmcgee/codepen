@@ -1,3 +1,7 @@
+body {
+  font-family:monospace;
+}
+
 #colors {
   min-width:33vw;
 max-width: 50vw;
