@@ -19,7 +19,7 @@ function randNum(num){
 }
 
 function loadJSON(){
-    $.getJSON("https://raw.githubusercontent.com/bpb27/trump-tweet-archive/master/data/realdonaldtrump/2017.json", function(json){
+    $.getJSON("https://raw.githubusercontent.com/minibeastsoftware/codepen/master/djt_quotes/condensed_2018.json", function(json){
         json.forEach(function(val){
           index.push("<p>"+val.text+"</p>")
     })
