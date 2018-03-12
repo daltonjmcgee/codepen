@@ -21,7 +21,7 @@ function randNum(num){
 function loadJSON(){
     $.getJSON("https://raw.githubusercontent.com/minibeastsoftware/codepen/master/djt_quotes/condensed_2018.json", function(json){
         json.forEach(function(val){
-          index.push("<p>"+val.text+"</p>")
+          index.push("<p>"+val.text+"</p>"+"<span id='timestamp'>"+val.created_at+"</span>")
     })
     generateQuote();
 });
@@ -29,7 +29,7 @@ function loadJSON(){
 
 function generateQuote(){
       num = randNum(index.length - 1)
-      document.getElementById("quote").innerHTML = index[num];
+      $("#quote").html(index[num]);
       randomBgColor();
 }
 

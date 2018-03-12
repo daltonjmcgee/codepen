@@ -12,16 +12,18 @@ body {
   display:flex;
   justify-content: center;
   align-items:center;
+  flex-direction: column;
+}
+
+#header{
+  font-size: 1em;
 }
 
 #quote_box{
-  min-width:33vw;
-  max-width: 50vw;
-  min-height:200px;
+  width:33vw;
   max-height:auto;
   background-color: #fff;
   position: relative;
-  top:calc(50vh - 100px);
   border-radius: 5px;
   display:flex;
   flex-direction:column;
@@ -35,10 +37,13 @@ body {
   padding-left: 5px;
 }
 
-#attribution{
+#attribution, #timestamp{
   position: relative;
   align-self: flex-end;
   padding-right:5px;
+}
+
+#attribution {
   font-weight: 900;
 }
 
@@ -46,6 +51,13 @@ body {
   align-self: flex-end;
   padding-top:15px;
   padding-right:5px;
+  transition:.25s ease
+}
+
+#new_quote:hover {
+  transition:.25s ease;
+  color: orange!important;
+  cursor:pointer;
 }
 
 #new_quote > * {
