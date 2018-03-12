@@ -21,7 +21,8 @@ function randNum(num){
 function loadJSON(){
     $.getJSON("https://raw.githubusercontent.com/minibeastsoftware/codepen/master/djt_quotes/condensed_2018.json", function(json){
         json.forEach(function(val){
-          index.push("<p>"+val.text+"</p>"+"<span id='timestamp'>"+val.created_at+"</span>")
+          date = val.created_at[0:10] + " " + val.created_at[-1:]
+          index.push("<p>"+val.text+"</p>"+"<span id='timestamp'>"++"</span>")
     })
     generateQuote();
 });
