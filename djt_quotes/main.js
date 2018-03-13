@@ -11,7 +11,7 @@ function randomBgColor() {
   var x = Math.round((Math.random() * colors.length));
   var color = colors[x];
   $("body").animate({backgroundColor:color},250 );
-  $("#quote, #attribution, #new_quote").animate({color:color},25);
+  $("#quote, #attribution, #new_quote, a>#timestamp ").animate({color:color},25);
 }
 
 function randNum(num){
@@ -21,8 +21,8 @@ function randNum(num){
 function loadJSON(){
     $.getJSON("https://raw.githubusercontent.com/minibeastsoftware/codepen/master/djt_quotes/condensed_2018.json", function(json){
         json.forEach(function(val){
-          date = val.created_at[0:10] + " " + val.created_at[-1:]
-          index.push("<p>"+val.text+"</p>"+"<span id='timestamp'>"++"</span>")
+          date = val.created_at.slice(4,10) + ", " + val.created_at.slice(25);
+          index.push("<p>"+val.text+"</p>"+"<a target='_blank' href='https://twitter.com/realDonaldTrump/status/"+val.id_str+"'><span id='timestamp'>"+date+"</span></a>");
     })
     generateQuote();
 });

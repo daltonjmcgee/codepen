@@ -8,6 +8,10 @@ body {
   font-weight:100;
 }
 
+a {
+  text-decoration: none;
+}
+
 #container{
   display:flex;
   justify-content: center;
@@ -17,6 +21,9 @@ body {
 
 #header{
   font-size: 1em;
+  color:transparent;
+  -webkit-text-stroke: .5px white;
+
 }
 
 #quote_box{
@@ -54,7 +61,7 @@ body {
   transition:.25s ease
 }
 
-#new_quote:hover {
+#new_quote:hover, a > #timestamp:hover {
   transition:.25s ease;
   color: orange!important;
   cursor:pointer;
