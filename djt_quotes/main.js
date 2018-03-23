@@ -11,7 +11,7 @@ function randomBgColor() {
   var x = Math.round((Math.random() * colors.length));
   var color = colors[x];
   $("body").animate({backgroundColor:color},250 );
-  $("#quote, #attribution, #new_quote, a>#timestamp ").animate({color:color},25);
+  $(".random_color").animate({color:color},25);
 }
 
 function randNum(num){
@@ -22,15 +22,22 @@ function loadJSON(){
     $.getJSON("https://raw.githubusercontent.com/minibeastsoftware/codepen/master/djt_quotes/condensed_2018.json", function(json){
         json.forEach(function(val){
           date = val.created_at.slice(4,10) + ", " + val.created_at.slice(25);
-          index.push("<p>"+val.text+"</p>"+"<a target='_blank' href='https://twitter.com/realDonaldTrump/status/"+val.id_str+"'><span id='timestamp'>"+date+"</span></a>");
+          index.push("<p>"+val.text+"</p>"+"<a target='_blank' href='https://twitter.com/realDonaldTrump/status/"+val.id_str+"'><span id='timestamp' class='random_color'>"+date+"</span></a>");
     })
     generateQuote();
 });
 }
 
+function twitterText(){
+  var tweetText = $("#quote > p").text();
+  $("#retweet > a").attr("href","https://twitter.com/intent/tweet?text=" + "'" + encodeURI(tweetText) + "' --Donald Trump");
+
+}
+
 function generateQuote(){
       num = randNum(index.length - 1)
       $("#quote").html(index[num]);
+      twitterText();
       randomBgColor();
 }
 

@@ -22,8 +22,7 @@ a {
 #header{
   font-size: 1em;
   color:transparent;
-  -webkit-text-stroke: .5px white;
-
+  -webkit-text-stroke: 1px white;
 }
 
 #quote_box{
@@ -61,7 +60,7 @@ a {
   transition:.25s ease
 }
 
-#new_quote:hover, a > #timestamp:hover {
+#new_quote:hover, a > #timestamp:hover, #retweet:hover > a {
   transition:.25s ease;
   color: orange!important;
   cursor:pointer;
