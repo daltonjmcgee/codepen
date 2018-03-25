@@ -1,0 +1,49 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#container > * {
+  align-self: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#settings > p > span {
+  cursor: pointer;
+}
+
+.selected {
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.fa-sun {
+  animation: spin 10s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
