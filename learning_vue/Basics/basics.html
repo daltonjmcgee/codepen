@@ -1,0 +1,37 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<div id="app">
+  <h1>Declarative Rendering</h1>
+  {{message}}
+</div>
+<div id="app-2">
+  <h1>Attr Binding</h1>
+  <span v-bind:title="message">Hover for Data info.</span>
+</div>
+<div id="app-3">
+  <h1>If-statement</h1>
+  <span v-if="seen">Is this seen?</span>
+</div>
+<div id="app-4">
+  <h1>For-loop</h1>
+  <ol>To-do
+    <li v-for="todo in todos">{{todo.text}}</li>
+  </ol>
+</div>
+<div id="app-5">
+  <h1>Methods</h1>
+  <p>{{message}}</p>
+  <button v-on:click="reverseMessage">Reverse</button>
+</div>
+<div id="app-6">
+  <h1>V-model</h1>
+  <p>{{message}}</p>
+  <input v-model="message">
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="main.js"></script>
