@@ -38,8 +38,9 @@ body
     align-items: center;
     justify-content: flex-end;
 
-    width: 280px;
+    width: 271px;
     height: 75px;
+    padding-right:9px;
 
     color: #306230;
     border: 1px solid black;
@@ -100,14 +101,16 @@ body
     background-color: #edc203;
 }
 
-.compare
+.operator
 {
     background-color: #ed8803;
 }
 
-.equal
+#equal
 {
     background-color: #ed4d03;
+    flex-grow: 2;
+    border-radius: 25px;
 }
 
 .clear
@@ -121,19 +124,12 @@ body
     border-radius: 50px!important;
 }
 
-.zero
+#zero
 {
     border-radius: 25px;
 }
 
-.equal
-{
-    flex-grow: 2;
-
-    border-radius: 25px;
-}
-
-.div
+#div
 {
     width: 29.05px;
 }
