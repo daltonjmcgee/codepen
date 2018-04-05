@@ -1,0 +1,22 @@
+body {
+  font-family:sans-serif;
+}
+
+.container {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container > * {
+  align-self:center;
+}
+
+#status {
+  font-weight:900;
+}
+
+#game {
+  font-size: 1.25em;
+  font-style: italic;
+}
