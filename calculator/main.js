@@ -1,4 +1,7 @@
-// practice with vanillaJS
+// practice with vanillaJS. It's written in such a way
+// as to replicate how hardware works. Registers and all that.
+// I don't know if this is the best "software" approach, but
+// there you go. 
 
 var registerA = [],
   registerB = [],
@@ -83,9 +86,10 @@ document.getElementById("equal").addEventListener("click", function() {
       output = number1 * number2;
       break;
     case "÷":
-      output = number1 % number2;
+      output = (number1 / number2).toFixed(3);
       break;
   }
   document.getElementById("display").innerHTML = parseFloat(output);
+  registerA = [output];
   registerB = [];
 })
