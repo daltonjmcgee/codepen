@@ -89,7 +89,7 @@ document.getElementById("equal").addEventListener("click", function() {
       output = number1 / number2
       break;
   }
-  document.getElementById("display").innerHTML = parseFloat(output.toString().slice(0,9)));
+  document.getElementById("display").innerHTML = parseFloat(output.toString().slice(0,9));
   registerA = [output];
   registerB = [];
 })

@@ -110,7 +110,6 @@ body
 #equal
 {
     background-color: #ed4d03;
-    flex-grow: 2;
     border-radius: 25px;
 }
 
@@ -123,14 +122,4 @@ body
 #row1 > *
 {
     border-radius: 50px!important;
-}
-
-#zero
-{
-    border-radius: 25px;
-}
-
-#div
-{
-    width: 29.05px;
 }
