@@ -1,0 +1,99 @@
+body {
+  font-family:sans-serif;
+}
+
+.container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title {
+  font-size: 3em;
+}
+.timers {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.timer-section  {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-section > div {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border:1px solid black;
+  border-radius:100%;
+  height:50px;
+  width:50px;
+  padding:25px;
+  margin:10px;
+}
+
+.timers > * > * > * {
+  margin:7.5px;
+  font-size: 1.5em;
+}
+
+.timer-setting {
+  cursor: pointer;
+}
+
+.timer-setting:hover {
+  color:blue;
+  background-color:lightyellow;
+  background-clip:content-box;
+}
+
+.timer-display, .timer-outer-shell {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius:100%;
+}
+
+.timer-display {
+  height:200px;
+  width:200px;
+  font-size: 2em;
+  cursor:pointer;
+  z-index:999;
+}
+
+.timer-display-start:hover {
+  color:transparent!important;
+}
+
+.timer-display-start:after{
+  color:black;
+  position:absolute;
+  content:"";
+  height:200px;
+  width:200px;
+  border-radius:100%;
+  z-index:999;
+}
+
+.timer-display-start:hover::after{
+  background-color:rgba(255,255,0,.25);
+  content:"START";
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:-999;
+}
+
+.timer-outer-shell {
+  border:1px solid black;
+  height: 215px;
+  width: 215px;
+}
