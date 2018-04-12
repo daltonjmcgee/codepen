@@ -12,6 +12,7 @@ body {
 #title {
   font-size: 3em;
 }
+
 .timers {
   display:flex;
   justify-content: center;

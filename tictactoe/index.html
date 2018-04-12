@@ -1,0 +1,55 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<div class="container">
+
+  <div class="game">
+    <h1>TIC TAC TOE</h1>
+    <div class="scoreboard">
+    </div>
+
+    <div id="game-choice" class="landing-screen">
+      <h2 class="game-type" id="humans">Mano y Mano</h2>
+      <h2 class="game-type" id="computadora">Mano y Computadora</h2>
+    </div>
+    <div id="game-piece-choice" class="player-options hidden no-opacity">
+      <h2>What shape do you want?</h2>
+      <div class="shapes">
+        <svg id="circle" class="shape-choice" height="46" width="46">
+        <circle cx="23" cy="23" r="20" stroke="black" fill="transparent" stroke-width="3"/>
+      </svg>
+      <svg id="ex" class="shape-choice" height="46" width="46">
+        <line x1="8" y1="8" x2="38" y2="38" stroke="black" stroke-width="3" />
+        <line x1="38" y1="8" x2="8" y2="38" stroke="black" stroke-width="3" />
+      </svg>
+      </div>
+    </div>
+
+    <div id="gameboard" class="gameboard hidden no-opacity">
+      <table class="gameboard-grid">
+        <tr class="row1" id="row1">
+          <td data-point = "A" data-available="true" class="row1 column1 cell" id="top-left"></td>
+          <td data-point = "B" data-available="true" class="row1 column2 cell" id="top-middle"></td>
+          <td data-point = "C" data-available="true" class="row1 column3 cell" id="top-right"></td>
+        </tr>
+        <tr id="row2">
+          <td data-point = "D" data-available="true" class="row2 column1 cell" id="middle-left"></td>
+          <td data-point = "E" data-available="true" class="row2 column2 cell" id="middle-middle"></td>
+          <td data-point = "F" data-available="true" class="row2 column3 cell" id="middle-right"></td>
+        </tr>
+        <tr id="row3">
+          <td data-point = "G" data-available="true" class="row3 column1 cell" id="bottom-left"></td>
+          <td data-point = "H" data-available="true" class="row3 column2 cell" id="bottom-middle"></td>
+          <td data-point = "I" data-available="true" class="row3 column3 cell" id="bottom-right"></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="main.js"></script>

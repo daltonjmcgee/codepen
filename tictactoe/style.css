@@ -1,0 +1,105 @@
+:root {
+  --hover-color:rgba(0,0,255,.5);
+  --transition-normal:.25s ease;
+
+}
+
+body {
+  font-family:sans-serif;
+}
+
+table {
+  border-collapse:collapse;
+}
+
+.no-opacity {
+  opacity:0;
+  transition:var(--transition-normal);
+}
+
+.hidden {
+  display:none!important;
+  transition:var(--transition-normal);
+}
+
+.container {
+    display:flex;
+    justify-content: center;
+}
+
+.game, .landing-screen, .player-options {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+
+.shapes {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape-choice:hover > * {
+  stroke:var(--hover-color);
+  cursor:pointer;
+}
+
+.landing-screen, .player-options {
+  border:1px black solid;
+}
+
+.game-type, .game-type:hover {
+  transition:var(--transition-normal);
+}
+
+.game-type:hover {
+  background-color:var(--hover-color);
+  cursor:pointer;
+}
+
+.gameboard, .gameboard-grid, .landing-screen, .player-options{
+  height:450px;
+  width:450px;
+}
+
+.cell {
+  height:155px;
+  width:155px;
+  transition:var(--transition-normal);
+}
+
+.cell:hover {
+  background-color:var(--hover-color);
+  transition:var(--transition-normal);
+  cursor:pointer;
+}
+
+.cell > svg {
+  height:150px;
+  width:150px;
+}
+
+#top-left {
+  border-right:1px solid black;
+  border-bottom:1px solid black;
+}
+
+#top-right {
+  border-left:1px solid black;
+  border-bottom:1px solid black;
+}
+
+#middle-middle {
+  border:1px solid black;
+}
+
+#bottom-left {
+  border-right:1px solid black;
+  border-top:1px solid black;
+}
+
+#bottom-right {
+  border-left:1px solid black;
+  border-top:1px solid black;
+}
