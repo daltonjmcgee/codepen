@@ -62,6 +62,7 @@ for (let x of shapeChoice) {
         computerShape = 0;
       }
       playerTurn = playerOneShape;
+      choice = window[gameShapes[playerTurn]];
       shapeTransition();
     })
 }
@@ -76,4 +77,16 @@ for (let x of cellChoice) {
         (playerTurn === 0) ? playerTurn = 1 : playerTurn = 0;
         choice = window[gameShapes[playerTurn]];
     }})
+}
+
+
+
+for (let x of winningCombos){
+	for (let y in x){
+		if(playerCombos[playerTurn].includes(x[0]) &&
+    playerCombos[playerTurn].includes(x[1]) &&
+      playerCombos[playerTurn].includes(x[2])){
+			console.log(x)
+		}
+	}
 }
