@@ -13,7 +13,13 @@ var circle = '<svg><circle cx="72" cy="72" r="69" stroke="blue" fill="transparen
   choice = window[gameShapes[playerTurn]],
   winningCombos = ["ABC","DEF","GHI","ADG","BEH","CFI","AEI","CEG"],
   playerCombos = ["",""]
+  numberOfTurns = 0;
 
+var computerTurn = setInterval(computerTurn, 1000);
+
+function getBox() {
+    return Math.floor(Math.random() * (73 - 65) + 65);
+  }
 
 function choiceTransition() {
   document.getElementById("game-choice").classList.add("no-opacity")
@@ -37,6 +43,31 @@ function shapeTransition() {
 
 }
 
+function checkForWin(){
+  numberOfTurns+=1;
+  for (let x of winningCombos){
+    for (let y in x){
+      if(playerCombos[playerTurn].includes(x[0]) &&
+      playerCombos[playerTurn].includes(x[1]) &&
+        playerCombos[playerTurn].includes(x[2])){
+          if (playerTurn === playerOneShape){
+            alert("Player 1 Wins!")
+            return location.reload();
+          }
+          else {
+            alert("Player 2 Wins!")
+            return location.reload();
+          }
+
+      }
+    }
+
+  }
+  if (numberOfTurns===9) {
+    alert("TIE GAME");
+    return location.reload();
+  }
+}
 for (let x of gameType) {
   x.addEventListener("click",
     function() {
@@ -74,19 +105,33 @@ for (let x of cellChoice) {
         this.setAttribute("data-available","false");
         playerCombos[playerTurn]+=this.getAttribute("data-point");
         this.innerHTML = choice;
+        checkForWin();
         (playerTurn === 0) ? playerTurn = 1 : playerTurn = 0;
         choice = window[gameShapes[playerTurn]];
     }})
 }
 
-
-
-for (let x of winningCombos){
-	for (let y in x){
-		if(playerCombos[playerTurn].includes(x[0]) &&
-    playerCombos[playerTurn].includes(x[1]) &&
-      playerCombos[playerTurn].includes(x[2])){
-			console.log(x)
-		}
-	}
+function computerTurn(){
+if (playerChoice === 0){
+  if (playerTurn !== playerOneShape){
+    var ascii = String.fromCharCode(getBox());
+    computerChoice = document.querySelector(`[data-point = ${ascii}]`)
+    function makeChoice(){
+      if(computerChoice.getAttribute("data-available") === "true"){
+        computerChoice.setAttribute("data-available","false");
+        playerCombos[playerTurn]+=computerChoice.getAttribute("data-point");
+        computerChoice.innerHTML = choice;
+      }
+      else {
+        computerChoice = String.fromCharCode(getBox());
+        computerChoice = document.querySelector(`[data-point = ${computerChoice}]`)
+        makeChoice()
+      }
+    }
+    makeChoice();
+    checkForWin();
+    (playerTurn === 0) ? playerTurn = 1 : playerTurn = 0;
+    choice = window[gameShapes[playerTurn]];
+  }
+}
 }
